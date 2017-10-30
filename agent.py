@@ -27,11 +27,11 @@ class Agent:
 
     def stopRequestTimer(self):
         if not self.isWaiting:
-            print ('ERROR! Must have a running timer (startRequestTimer()) before stopping it.')
+            print 'ERROR! Must have a running timer (startRequestTimer()) before stopping it.'
         else:
             self.endTime = time.time()
             self.isWaiting = False
-            print ('{} {} {}'.format("Request took: ", self.endTime - self.startTime, " ms."))
+            print '{} {} {}'.format("Request took: ", self.endTime - self.startTime, " ms.")
 
 
     def countStrings(self):
@@ -46,7 +46,7 @@ class Agent:
     def getMemoryUsed(self):
         #Kinda hacky, but for each object in the garbage collection, get it's size and add to a running sum.
         #using pympler's asizeOf instead of sys.sizeOf to remove GC's overhead from count. (https://stackoverflow.com/questions/34787327/pympler-asizeof-vs-sys-getsizeof)
-        print ("{} {} {}".format("Total memory used: ", sum([asizeof(o) for o in gc.get_objects()]), " bytes"))
+        print "{} {} {}".format("Total memory used: ", sum([asizeof(o) for o in gc.get_objects()]), " bytes")
 
     def addRequestID(self, res):
         response = aResponse(res)

@@ -1,6 +1,6 @@
 ##  pyAgent
 
-An attempt at a sample python agent to monitor a rest request and display record interesting events about it.
+An attempt at a sample python agent to monitor a rest request and display record interesting events about it. Current logging is within console after running `__main__.py`
 
 
 ## How to Install

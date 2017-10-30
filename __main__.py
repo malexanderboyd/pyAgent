@@ -26,9 +26,9 @@ def check_monitor(res):
     if monitorEnabled:
         stringCount = monitor.countStrings()
         monitor.stopRequestTimer()
-        print '{} {}'.format("# of string objects created:", stringCount)
+        print ('{} {}'.format("# of string objects created:", stringCount))
         taggedResponse =  monitor.addRequestID(res)
-        print '{} {}'.format("Response ID:", taggedResponse.id)
+        print ('{} {}'.format("Response ID:", taggedResponse.id))
         monitor.getMemoryUsed()
         return taggedResponse.response
     else:

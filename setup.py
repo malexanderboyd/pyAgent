@@ -7,7 +7,7 @@ setup(name='RequestAgent',
       author='Alex Boyd',
       author_email='malexanderboyd@gmail.com',
       license='MIT',
-      packages=['static', 'templates'],
+      packages=[],
       install_requires=[
           'Flask',
           'pympler',
